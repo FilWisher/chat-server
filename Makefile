@@ -5,7 +5,7 @@ server: server.c
 	$(CC) $(CFLAGS) -levent server.c -o server
 
 test: server
-	perl test/server.pl
+	@ perl -I`pwd`/test test/server.pl
 
 clean:
 	@ rm -rf server
